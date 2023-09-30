@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS staging_event
     sessionID       TEXT,
     song            TEXT,
     status          VARCHAR(3),
-    ts              TIMESTAMP,
+    ts              BIGINT,
     userAgent       TEXT,
     userId          TEXT 
 );                                       
@@ -89,7 +89,7 @@ CREATE TABLE IF NOT EXISTS song (
     title         TEXT NOT NULL, 
     artist_id     TEXT NOT NULL, 
     year          INT NOT NULL, 
-    "duration"      DECIMAL NOT NULL                   
+    duration      DECIMAL NOT NULL                   
 ) DISTSTYLE ALL;
 """)
                      
